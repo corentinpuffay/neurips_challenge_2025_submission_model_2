@@ -9,7 +9,7 @@ This model outputs a scalar value representing the externalizing factor.
 ## 🚀 Overview
 
 The model, `EEGTransformerFull`, processes raw EEG signals sampled at **500 Hz** and produces per-trial predictions.  
-It includes all preprocessing steps (high-pass filtering, artifact attenuation, referencing, resampling, normalization) followed by a transformer encoder for temporal feature extraction.  
+It includes all preprocessing steps (high-pass filtering, artifact suppression, referencing, resampling, normalization) followed by a transformer encoder for temporal feature extraction.  
 Multiple model instances are combined via an ensemble (`SimpleEnsemble`) for improved robustness.
 
 ---
