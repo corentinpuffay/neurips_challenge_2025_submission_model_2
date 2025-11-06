@@ -1,0 +1,30 @@
+Combination 11
+Test loss at epoch 26 with lowest validation loss (1.0023): 0.9913
+Combination 11
+Test loss at epoch 25 with lowest validation loss (0.9984): 0.9956
+Combination 11
+Test loss at epoch 31 with lowest validation loss (0.9977): 0.9933
+Combination 11
+Test loss at epoch 26 with lowest validation loss (1.0003): 0.9946
+Combination 11
+Test loss at epoch 25 with lowest validation loss (0.9913): 0.9944
+Combination 11
+Test loss at epoch 42 with lowest validation loss (0.9998): 0.9949
+Combination 11
+Test loss at epoch 25 with lowest validation loss (0.9925): 1.0066
+Combination 11
+Test loss at epoch 10 with lowest validation loss (0.9966): 0.9945
+Combination 11
+Test loss at epoch 27 with lowest validation loss (0.9972): 0.9970
+Combination 11
+Test loss at epoch 1 with lowest validation loss (1.0013): 1.0040
+Combination 11
+Test loss at epoch 26 with lowest validation loss (1.0017): 0.9918
+Combination 11
+Test loss at epoch 19 with lowest validation loss (1.0018): 0.9925
+Combination 11
+Test loss at epoch 15 with lowest validation loss (0.9977): 0.9958
+Combination 11
+Test loss at epoch 25 with lowest validation loss (0.9961): 0.9960
+Combination 11
+Test loss at epoch 25 with lowest validation loss (0.9942): 0.9945

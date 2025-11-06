@@ -1,0 +1,213 @@
+Run started at 2025-11-03T12:03:58.161088
+
+=== Combination 11 ===
+Settings(batch_size=2048, accumulation_steps=4, d_model=16, dim_feedforward=32, num_layers=1, nheads=1, dropout=0.3, huber_delta=2.0, n_epochs=100, loss_fn='NRMSE')EEGTransformer(
+  (channel_proj): Sequential(
+    (0): Conv1d(10, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+    (1): ReLU()
+  )
+  (ln_proj): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+  (dropout_proj): Dropout(p=0.3, inplace=False)
+  (pos_encoder): PositionalEncoding()
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=16, out_features=16, bias=True)
+        )
+        (linear1): Linear(in_features=16, out_features=32, bias=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+        (linear2): Linear(in_features=32, out_features=16, bias=True)
+        (norm1): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.3, inplace=False)
+        (dropout2): Dropout(p=0.3, inplace=False)
+      )
+    )
+  )
+  (pool): AdaptiveAvgPool1d(output_size=1)
+  (fc): Linear(in_features=16, out_features=1, bias=True)
+  (dropout_fc): Dropout(p=0.3, inplace=False)
+)
+Number of parameters: 2769
+Epoch 0 took 4.23 seconds - min loss: 1.0442 - max loss: 1.3715 - lr: 0.010000
+Validation loss after epoch 0: 1.0265
+Validation loss after epoch 0: 1.0092
+Validation loss after epoch 0: 1.0183
+Epoch 1 took 4.16 seconds - min loss: 1.0178 - max loss: 1.0717 - lr: 0.010000
+Validation loss after epoch 1: 1.0261
+Validation loss after epoch 1: 1.0065
+Validation loss after epoch 1: 1.0111
+Epoch 2 took 4.15 seconds - min loss: 1.0057 - max loss: 1.0345 - lr: 0.010000
+Validation loss after epoch 2: 1.0072
+Validation loss after epoch 2: 1.0028
+Validation loss after epoch 2: 1.0010
+Epoch 3 took 4.31 seconds - min loss: 1.0018 - max loss: 1.0195 - lr: 0.010000
+Validation loss after epoch 3: 1.0167
+Validation loss after epoch 3: 1.0025
+Validation loss after epoch 3: 1.0022
+Epoch 4 took 4.34 seconds - min loss: 0.9985 - max loss: 1.0144 - lr: 0.010000
+Validation loss after epoch 4: 1.0154
+Validation loss after epoch 4: 1.0025
+Validation loss after epoch 4: 1.0014
+Epoch 5 took 4.11 seconds - min loss: 0.9947 - max loss: 1.0107 - lr: 0.010000
+Validation loss after epoch 5: 1.0104
+Validation loss after epoch 5: 1.0023
+Validation loss after epoch 5: 0.9994
+Epoch 6 took 4.14 seconds - min loss: 0.9930 - max loss: 1.0032 - lr: 0.010000
+Validation loss after epoch 6: 1.0104
+Validation loss after epoch 6: 1.0025
+Validation loss after epoch 6: 0.9990
+Epoch 7 took 4.15 seconds - min loss: 0.9893 - max loss: 1.0010 - lr: 0.010000
+Validation loss after epoch 7: 1.0093
+Validation loss after epoch 7: 1.0029
+Validation loss after epoch 7: 0.9979
+Epoch 8 took 4.10 seconds - min loss: 0.9889 - max loss: 0.9981 - lr: 0.010000
+Validation loss after epoch 8: 1.0063
+Validation loss after epoch 8: 1.0035
+Validation loss after epoch 8: 0.9962
+Epoch 9 took 4.10 seconds - min loss: 0.9828 - max loss: 0.9980 - lr: 0.010000
+Validation loss after epoch 9: 1.0066
+Validation loss after epoch 9: 1.0044
+Validation loss after epoch 9: 0.9957
+Epoch 10 took 4.20 seconds - min loss: 0.9843 - max loss: 0.9956 - lr: 0.010000
+Validation loss after epoch 10: 1.0052
+Validation loss after epoch 10: 1.0053
+Validation loss after epoch 10: 0.9947
+Epoch 11 took 4.13 seconds - min loss: 0.9774 - max loss: 0.9939 - lr: 0.010000
+Validation loss after epoch 11: 1.0071
+Validation loss after epoch 11: 1.0059
+Validation loss after epoch 11: 0.9942
+Epoch 12 took 4.13 seconds - min loss: 0.9784 - max loss: 0.9951 - lr: 0.010000
+Validation loss after epoch 12: 1.0102
+Validation loss after epoch 12: 1.0060
+Validation loss after epoch 12: 0.9951
+Epoch 13 took 4.16 seconds - min loss: 0.9746 - max loss: 0.9952 - lr: 0.010000
+Validation loss after epoch 13: 1.0141
+Validation loss after epoch 13: 1.0069
+Validation loss after epoch 13: 0.9965
+Epoch 14 took 4.14 seconds - min loss: 0.9747 - max loss: 0.9922 - lr: 0.010000
+Validation loss after epoch 14: 1.0117
+Validation loss after epoch 14: 1.0068
+Validation loss after epoch 14: 0.9945
+Epoch 15 took 4.15 seconds - min loss: 0.9743 - max loss: 0.9925 - lr: 0.010000
+Validation loss after epoch 15: 1.0091
+Validation loss after epoch 15: 1.0066
+Validation loss after epoch 15: 0.9934
+Epoch 16 took 4.19 seconds - min loss: 0.9697 - max loss: 0.9894 - lr: 0.010000
+Validation loss after epoch 16: 1.0087
+Validation loss after epoch 16: 1.0071
+Validation loss after epoch 16: 0.9935
+Epoch 17 took 4.15 seconds - min loss: 0.9710 - max loss: 0.9899 - lr: 0.010000
+Validation loss after epoch 17: 1.0123
+Validation loss after epoch 17: 1.0077
+Validation loss after epoch 17: 0.9943
+Epoch 18 took 4.15 seconds - min loss: 0.9703 - max loss: 0.9882 - lr: 0.010000
+Validation loss after epoch 18: 1.0101
+Validation loss after epoch 18: 1.0078
+Validation loss after epoch 18: 0.9932
+Epoch 19 took 4.15 seconds - min loss: 0.9687 - max loss: 0.9868 - lr: 0.010000
+Validation loss after epoch 19: 1.0110
+Validation loss after epoch 19: 1.0079
+Validation loss after epoch 19: 0.9925
+Epoch 20 took 4.21 seconds - min loss: 0.9651 - max loss: 0.9852 - lr: 0.010000
+Validation loss after epoch 20: 1.0171
+Validation loss after epoch 20: 1.0090
+Validation loss after epoch 20: 0.9950
+Epoch 21 took 4.22 seconds - min loss: 0.9670 - max loss: 0.9869 - lr: 0.010000
+Validation loss after epoch 21: 1.0086
+Validation loss after epoch 21: 1.0080
+Validation loss after epoch 21: 0.9908
+Epoch 22 took 4.18 seconds - min loss: 0.9672 - max loss: 0.9860 - lr: 0.010000
+Validation loss after epoch 22: 1.0132
+Validation loss after epoch 22: 1.0086
+Validation loss after epoch 22: 0.9919
+Epoch 23 took 4.10 seconds - min loss: 0.9615 - max loss: 0.9885 - lr: 0.010000
+Validation loss after epoch 23: 1.0152
+Validation loss after epoch 23: 1.0087
+Validation loss after epoch 23: 0.9926
+Epoch 24 took 4.12 seconds - min loss: 0.9658 - max loss: 0.9860 - lr: 0.010000
+Validation loss after epoch 24: 1.0154
+Validation loss after epoch 24: 1.0096
+Validation loss after epoch 24: 0.9922
+
+=== Combination 11 ===
+
+
+
+
+=== Combination 11 ===
+Settings(batch_size=2048, accumulation_steps=4, d_model=16, dim_feedforward=32, num_layers=1, nheads=1, dropout=0.3, huber_delta=2.0, n_epochs=100, loss_fn='NRMSE')EEGTransformer(
+  (channel_proj): Sequential(
+    (0): Conv1d(10, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+    (1): ReLU()
+  )
+  (ln_proj): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+  (dropout_proj): Dropout(p=0.3, inplace=False)
+  (pos_encoder): PositionalEncoding()
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=16, out_features=16, bias=True)
+        )
+        (linear1): Linear(in_features=16, out_features=32, bias=True)
+        (dropout): Dropout(p=0.3, inplace=False)
+        (linear2): Linear(in_features=32, out_features=16, bias=True)
+        (norm1): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.3, inplace=False)
+        (dropout2): Dropout(p=0.3, inplace=False)
+      )
+    )
+  )
+  (pool): AdaptiveAvgPool1d(output_size=1)
+  (fc): Linear(in_features=16, out_features=1, bias=True)
+  (dropout_fc): Dropout(p=0.3, inplace=False)
+)
+Number of parameters: 2769
+Loaded weights from model_weights_11_24.pt
+Epoch 25 took 4.25 seconds - min loss: 0.9692 - max loss: 1.4323 - lr: 0.010000
+Validation loss after epoch 25: 0.9908
+Validation loss after epoch 25: 1.0091
+Validation loss after epoch 25: 0.9906
+Epoch 26 took 4.12 seconds - min loss: 0.9699 - max loss: 0.9893 - lr: 0.010000
+Validation loss after epoch 26: 1.0016
+Validation loss after epoch 26: 1.0119
+Validation loss after epoch 26: 0.9918
+Epoch 27 took 4.08 seconds - min loss: 0.9667 - max loss: 0.9834 - lr: 0.010000
+Validation loss after epoch 27: 1.0068
+Validation loss after epoch 27: 1.0069
+Validation loss after epoch 27: 0.9900
+Epoch 28 took 4.08 seconds - min loss: 0.9656 - max loss: 0.9825 - lr: 0.010000
+Validation loss after epoch 28: 1.0143
+Validation loss after epoch 28: 1.0095
+Validation loss after epoch 28: 0.9918
+Epoch 29 took 4.14 seconds - min loss: 0.9672 - max loss: 0.9840 - lr: 0.010000
+Validation loss after epoch 29: 1.0053
+Validation loss after epoch 29: 1.0089
+Validation loss after epoch 29: 0.9886
+Epoch 30 took 4.14 seconds - min loss: 0.9643 - max loss: 0.9821 - lr: 0.010000
+Validation loss after epoch 30: 1.0020
+Validation loss after epoch 30: 1.0100
+Validation loss after epoch 30: 0.9886
+Epoch 31 took 4.21 seconds - min loss: 0.9636 - max loss: 0.9823 - lr: 0.010000
+Validation loss after epoch 31: 1.0039
+Validation loss after epoch 31: 1.0096
+Validation loss after epoch 31: 0.9898
+Epoch 32 took 4.39 seconds - min loss: 0.9608 - max loss: 0.9829 - lr: 0.010000
+Validation loss after epoch 32: 1.0032
+Validation loss after epoch 32: 1.0107
+Validation loss after epoch 32: 0.9899
+Epoch 33 took 4.09 seconds - min loss: 0.9611 - max loss: 0.9823 - lr: 0.010000
+Validation loss after epoch 33: 1.0004
+Validation loss after epoch 33: 1.0101
+Validation loss after epoch 33: 0.9889
+Epoch 34 took 4.31 seconds - min loss: 0.9626 - max loss: 0.9826 - lr: 0.010000
+Validation loss after epoch 34: 1.0007
+Validation loss after epoch 34: 1.0110
+Validation loss after epoch 34: 0.9895
+Epoch 35 took 4.13 seconds - min loss: 0.9634 - max loss: 0.9845 - lr: 0.010000
+Validation loss after epoch 35: 0.9971
+Validation loss after epoch 35: 1.0125
+Validation loss after epoch 35: 0.9914

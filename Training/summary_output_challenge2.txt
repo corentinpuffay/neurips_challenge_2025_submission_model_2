@@ -1,0 +1,4 @@
+Combination 11
+Test loss at epoch 26 with lowest validation loss (0.9921): 0.9968
+Combination 35
+Test loss at epoch 25 with lowest validation loss (0.9990): 1.0136
