@@ -16,9 +16,13 @@ Multiple model instances are combined via an ensemble (`SimpleEnsemble`) for imp
 
 ## 📦 Repository Structure
 
-├── model_challenge_2.py # Defines EEGTransformerFull, PositionalEncoding, and SimpleEnsemble
-├── submission.py # Challenge submission entry point
-└── README.md # This file
+```
+├── model_challenge_2.py       # Defines EEGTransformerFull, PositionalEncoding, and SimpleEnsemble
+├── submission.py              # Challenge submission entry point
+└── README.md                  # This file
+```
+
+---
 
 ### EEGTransformerFull
 
