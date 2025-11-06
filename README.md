@@ -1,8 +1,7 @@
-# 🧠 NeurIPS EEG Foundation Challenge 2025 – Submission
+# 🧠 NeurIPS EEG Foundation Challenge 2025 – KU Leuven EEG Decoding Team 
 
-This repository contains the code for a submission to the **NeurIPS 2025 EEG Foundation Challenge**.  
+This repository contains the code base for challenge 2 of the **NeurIPS 2025 EEG Foundation Challenge**.  
 It implements an **end-to-end transformer-based model** for EEG decoding, performing both preprocessing and temporal modeling directly within PyTorch.  
-The design replicates the MATLAB preprocessing pipeline in a differentiable, efficient form suitable for GPU inference.
 
 ---
 
@@ -41,7 +40,7 @@ An end-to-end EEG transformer model with embedded preprocessing and a lightweigh
 
 #### 🧠 Transformer Encoder
 
-- **Channel projection**: 1D convolution to project EEG channels into a `d_model`-dimensional feature space.  
+- **Channel projection**: 1D convolution to project EEG channels into a `d_model=16`-dimensional feature space.  
 - **Positional encoding**: standard sinusoidal encoding up to 3840 samples.  
 - **Transformer encoder**: 1–2 layers (`nhead=1`, `dim_feedforward=32`), with dropout and LayerNorm.  
 - **Pooling and output**: adaptive average pooling + linear head → scalar prediction.
