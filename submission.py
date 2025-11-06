@@ -36,7 +36,7 @@ class Submission:
         )
 
         # load the weights
-        state_dict = torch.load(resolve_path("weights_challenge_2.pt"), map_location=self.device)
+        state_dict = torch.load(resolve_path("/path/to/your/weights.pt"), map_location=self.device)
         new_model.load_state_dict(state_dict, strict=False)
 
         return new_model

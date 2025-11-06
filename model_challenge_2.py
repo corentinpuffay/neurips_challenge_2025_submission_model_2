@@ -173,19 +173,13 @@ class EEGTransformerFull(nn.Module):
         # 4. Resampling 500 Hz → 64 Hz
         x = self.resample(x)
 
-
         # 6. Artifact suppression
         x = self.artifact_suppression(x)
 
-
-        ##### Segmentation will be already made in the eval set
-        # 7. Segment into 2-second windows
-        #x = self.segment_batches(x)
-
-        # 8. Z-score normalization per channel
+        # 7. Z-score normalization per channel
         x = self.zscore_normalise(x)
 
-        # 9. Channel projection and transformer
+        # 8. Channel projection and transformer
         x = self.channel_proj(x)
         x = x.permute(0, 2, 1)
         x = self.ln_proj(x)
@@ -193,7 +187,7 @@ class EEGTransformerFull(nn.Module):
         x = self.pos_encoder(x)
         x = self.transformer_encoder(x)
 
-        # 10. Pool and output
+        # 9. Pool and output
         x = x.permute(0, 2, 1)
         x = self.pool(x).squeeze(-1)
         x = self.dropout_fc(x)
