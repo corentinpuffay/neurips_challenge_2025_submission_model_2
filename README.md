@@ -43,7 +43,7 @@ An end-to-end EEG transformer model with embedded preprocessing and a lightweigh
 
 - **Channel projection**: 1D convolution to project EEG channels into a `d_model=16`-dimensional feature space.  
 - **Positional encoding**: standard sinusoidal encoding up to 3840 samples.  
-- **Transformer encoder**: 1–2 layers (`nhead=1`, `dim_feedforward=32`), with dropout and LayerNorm.  
+- **Transformer encoder**: 1 layer (`nhead=1`, `dim_feedforward=32`), with dropout and LayerNorm.  
 - **Pooling and output**: adaptive average pooling + linear head → scalar prediction.
 
 #### ✨ Model Summary
