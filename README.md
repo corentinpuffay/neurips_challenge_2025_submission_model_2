@@ -1,7 +1,8 @@
 # 🧠 NeurIPS EEG Foundation Challenge 2025 – KU Leuven EEG Decoding Team 
 
 This repository contains the code base for challenge 2 of the **NeurIPS 2025 EEG Foundation Challenge**.  
-It implements an **end-to-end transformer-based model** for EEG decoding, performing both preprocessing and temporal modeling directly within PyTorch.  
+It implements an **end-to-end transformer-based model** for EEG decoding, performing both preprocessing and temporal modeling directly within PyTorch. 
+This model outputs a scalar value representing the externalizing factor.
 
 ---
 
@@ -47,7 +48,7 @@ An end-to-end EEG transformer model with embedded preprocessing and a lightweigh
 
 #### ✨ Model Summary
 - **Input**: `(batch_size, 128, timepoints)` EEG at 500 Hz  
-- **Output**: `(batch_size, 1)` prediction (for classification or regression)
+- **Output**: `(batch_size, 1)` externalizing factor prediction
 - **Default hyperparameters**:
   ```python
   d_model = 16
